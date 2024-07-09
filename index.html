@@ -24,15 +24,19 @@
                 <label for="height">3. What is your height (in cm)?</label>
                 <input type="number" id="height" name="height" required>
             </div>
+			<div class="question">
+				<label>4. What is your waist circumference (in cm)?</label>
+				<input type="number" id="waist" name="waist" required>
+			</div>
             <div class="question">
-                <label for="sex">4. What is your sex?</label>
+                <label for="sex">5. What is your sex?</label>
                 <select id="sex" name="sex" required>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
                 </select>
             </div>
             <div class="question">
-                <label>5. How often do you experience stress?</label>
+                <label>6. How often do you experience stress?</label>
                 <div class="options">
                     <label><input type="radio" name="stress" value="1" required> Never</label>
                     <label><input type="radio" name="stress" value="2"> Rarely</label>
@@ -41,7 +45,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>6. How often do you consume caffeine?</label>
+                <label>7. How often do you consume caffeine?</label>
                 <div class="options">
                     <label><input type="radio" name="caffeine" value="1" required> Never</label>
                     <label><input type="radio" name="caffeine" value="2"> Rarely</label>
@@ -50,7 +54,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>7. How often are you sedentary (sitting or lying down for long periods)?</label>
+                <label>8. How often are you sedentary (sitting or lying down for long periods)?</label>
                 <div class="options">
                     <label><input type="radio" name="sedentary" value="1" required> Never</label>
                     <label><input type="radio" name="sedentary" value="2"> Rarely</label>
@@ -59,7 +63,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>8. How often do you consume processed foods?</label>
+                <label>9. How often do you consume processed foods?</label>
                 <div class="options">
                     <label><input type="radio" name="processedFoods" value="1" required> Never</label>
                     <label><input type="radio" name="processedFoods" value="2"> Rarely</label>
@@ -68,7 +72,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>9. How often do you consume sugary drinks?</label>
+                <label>10. How often do you consume sugary drinks?</label>
                 <div class="options">
                     <label><input type="radio" name="sugaryDrinks" value="1" required> Never</label>
                     <label><input type="radio" name="sugaryDrinks" value="2"> Rarely</label>
@@ -76,11 +80,33 @@
                     <label><input type="radio" name="sugaryDrinks" value="4"> Often</label>
                 </div>
             </div>
-            
+            <div class="question">
+				<label>11. Do you undertake any physical activities for minimum of 150 minutes in a week?</label>
+				<div class="options">
+					<label><input type="radio" name="physical_activity" value="0" required> Yes</label>
+					<label><input type="radio" name="physical_activity" value="1"> No</label>
+				</div>
+			</div>
+			<div class="question">
+				<label>12. Do you smoke or consume smokeless products such as gutka or khani?</label>
+				<div class="options">
+					<label><input type="radio" name="smoking" value="2" required> Daily</label>
+					<label><input type="radio" name="smoking" value="1"> Sometimes</label>
+					<label><input type="radio" name="smoking" value="0"> Never</label>
+				</div>
+			</div>
+			<div class="question">
+				<label>13. Do you consume alcohol daily?</label>
+				<div class="options">
+					<label><input type="radio" name="alcohol" value="1" required> Yes</label>
+					<label><input type="radio" name="alcohol" value="0"> No</label>
+				</div>
+			</div>
+
             <!-- Section 2: Questions about pre-existing co-morbidities (if known) -->
             <h2>2. Questions about Pre-existing Co-morbidities (if known)</h2>
             <div class="question">
-                <label>10. Do you have any of the following pre-existing conditions?</label>
+                <label>14. Do you have any of the following pre-existing conditions?</label>
                 <div class="options">
                     <label><input type="checkbox" name="comorbidities" value="hypertension"> Hypertension</label>
                     <label><input type="checkbox" name="comorbidities" value="diabetes"> Diabetes</label>
@@ -93,7 +119,7 @@
             <!-- Section 3: Questions about symptoms -->
             <h2>3. Questions about Symptoms</h2>
             <div class="question">
-                <label>11. How often do you experience headaches?</label>
+                <label>15. How often do you experience headaches?</label>
                 <div class="options">
                     <label><input type="radio" name="headaches" value="1" required> Never</label>
                     <label><input type="radio" name="headaches" value="2"> Rarely</label>
@@ -102,7 +128,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>12. How often do you experience chest pain?</label>
+                <label>16. How often do you experience chest pain?</label>
                 <div class="options">
                     <label><input type="radio" name="chest_pain" value="1" required> Never</label>
                     <label><input type="radio" name="chest_pain" value="2"> Rarely</label>
@@ -111,7 +137,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>13. How often do you experience dizziness?</label>
+                <label>17. How often do you experience dizziness?</label>
                 <div class="options">
                     <label><input type="radio" name="dizziness" value="1" required> Never</label>
                     <label><input type="radio" name="dizziness" value="2"> Rarely</label>
@@ -120,7 +146,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>14. How often do you experience difficulty breathing?</label>
+                <label>18. How often do you experience difficulty breathing?</label>
                 <div class="options">
                     <label><input type="radio" name="difficulty_breathing" value="1" required> Never</label>
                     <label><input type="radio" name="difficulty_breathing" value="2"> Rarely</label>
@@ -129,7 +155,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>15. How often do you experience nausea?</label>
+                <label>19. How often do you experience nausea?</label>
                 <div class="options">
                     <label><input type="radio" name="nausea" value="1" required> Never</label>
                     <label><input type="radio" name="nausea" value="2"> Rarely</label>
@@ -138,7 +164,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>16. How often do you experience vomiting?</label>
+                <label>20. How often do you experience vomiting?</label>
                 <div class="options">
                     <label><input type="radio" name="vomiting" value="1" required> Never</label>
                     <label><input type="radio" name="vomiting" value="2"> Rarely</label>
@@ -147,7 +173,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>17. How often do you experience vision changes?</label>
+                <label>21. How often do you experience vision changes?</label>
                 <div class="options">
                     <label><input type="radio" name="vision_changes" value="1" required> Never</label>
                     <label><input type="radio" name="vision_changes" value="2"> Rarely</label>
@@ -156,7 +182,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>18. How often do you experience confusion?</label>
+                <label>22. How often do you experience confusion?</label>
                 <div class="options">
                     <label><input type="radio" name="confusion" value="1" required> Never</label>
                     <label><input type="radio" name="confusion" value="2"> Rarely</label>
@@ -165,7 +191,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>19. How often do you experience buzzing in the ears?</label>
+                <label>23. How often do you experience buzzing in the ears?</label>
                 <div class="options">
                     <label><input type="radio" name="buzzing_ears" value="1" required> Never</label>
                     <label><input type="radio" name="buzzing_ears" value="2"> Rarely</label>
@@ -174,7 +200,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>20. How often do you experience nosebleeds?</label>
+                <label>24. How often do you experience nosebleeds?</label>
                 <div class="options">
                     <label><input type="radio" name="nosebleeds" value="1" required> Never</label>
                     <label><input type="radio" name="nosebleeds" value="2"> Rarely</label>
@@ -183,7 +209,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>21. How often do you experience swelling in the legs, ankles, or feet?</label>
+                <label>25. How often do you experience swelling in the legs, ankles, or feet?</label>
                 <div class="options">
                     <label><input type="radio" name="swelling" value="1" required> Never</label>
                     <label><input type="radio" name="swelling" value="2"> Rarely</label>
@@ -191,25 +217,60 @@
                     <label><input type="radio" name="swelling" value="4"> Often</label>
                 </div>
             </div>
+			<div class="question">
+				<label>26. Do you experience night sweats?</label>
+				<div class="options">
+					<label><input type="radio" name="night_sweats" value="1" required> Yes</label>
+					<label><input type="radio" name="night_sweats" value="0"> No</label>
+				</div>
+			</div>
+			<div class="question">
+				<label>27. Do you have cloudy or blurred vision?</label>
+				<div class="options">
+					<label><input type="radio" name="blurred_vision" value="1" required> Yes</label>
+					<label><input type="radio" name="blurred_vision" value="0"> No</label>
+				</div>
+			</div>
+			<div class="question">
+				<label>28. Do you have pain in eyes lasting for more than a week?</label>
+				<div class="options">
+					<label><input type="radio" name="eye_pain" value="1" required> Yes</label>
+					<label><input type="radio" name="eye_pain" value="0"> No</label>
+				</div>
+			</div>
+			<div class="question">
+				<label>29. Do you have redness in eyes lasting for more than a week?</label>
+				<div class="options">
+					<label><input type="radio" name="eye_redness" value="1" required> Yes</label>
+					<label><input type="radio" name="eye_redness" value="0"> No</label>
+				</div>
+			</div>
+			<div class="question">
+				<label>30. Do you have weakness in feet that cause difficulty in walking?</label>
+				<div class="options">
+					<label><input type="radio" name="feet_weakness" value="1" required> Yes</label>
+					<label><input type="radio" name="feet_weakness" value="0"> No</label>
+				</div>
+			</div>
 
             <!-- Section 4: Other questions -->
             <h2>4. Other Questions</h2>
             <div class="question">
-                <label>22. Do you have a family history of cardiovascular diseases?</label>
+                <label>31. Do you have a family history of cardiovascular diseases?</label>
                 <div class="options">
                     <label><input type="radio" name="family_history" value="1" required> Yes</label>
                     <label><input type="radio" name="family_history" value="2"> No</label>
                 </div>
             </div>
             <div class="question">
-                <label>23. Have you undergone any major surgeries?</label>
+                <label>32. Have you undergone any major surgeries?</label>
                 <div class="options">
                     <label><input type="radio" name="major_surgeries" value="1" required> Yes</label>
                     <label><input type="radio" name="major_surgeries" value="2"> No</label>
                 </div>
             </div>
             <div class="question">
-                <label>24. Do you have any medical devices (e.g., pacemakers, prosthetic valves)?</label>
+                <label>33. Do you have any medical devices (e.g., pacemakers, prosthetic valves)?</label>
                 <div class="options">
                     <label><input type="radio" name="medical_devices" value="1" required> Yes</label>
                     <label><input type="radio" name="medical_devices" value="2"> No</label>

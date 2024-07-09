@@ -28,6 +28,17 @@ document.getElementById('riskForm').addEventListener('submit', function (event) 
     const familyHistory = document.querySelector('input[name="family_history"]:checked').value;
     const majorSurgeries = document.querySelector('input[name="major_surgeries"]:checked').value;
     const medicalDevices = document.querySelector('input[name="medical_devices"]:checked').value;
+	const shortnessOfBreath = document.querySelector('input[name="shortness_of_breath"]:checked').value;
+	const nightSweats = document.querySelector('input[name="night_sweats"]:checked').value;
+	const blurredVision = document.querySelector('input[name="blurred_vision"]:checked').value;
+	const eyePain = document.querySelector('input[name="eye_pain"]:checked').value;
+	const eyeRedness = document.querySelector('input[name="eye_redness"]:checked').value;
+	const feetWeakness = document.querySelector('input[name="feet_weakness"]:checked').value;
+	const smoking = document.querySelector('input[name="smoking"]:checked').value;
+	const alcohol = document.querySelector('input[name="alcohol"]:checked').value;
+	const waist = parseInt(document.getElementById('waist').value);
+	const physicalActivity = document.querySelector('input[name="physical_activity"]:checked').value;
+
 
     // Calculate risk score
     let riskScore = 0;
@@ -63,8 +74,19 @@ document.getElementById('riskForm').addEventListener('submit', function (event) 
     if (familyHistory == '1') riskScore += 10;
     if (majorSurgeries == '1') riskScore += 10;
     if (medicalDevices == '1') riskScore += 10;
-
+	// Add these to the risk score calculation
+	if (nightSweats == '1') riskScore += 3;
+	if (blurredVision == '1') riskScore += 3;
+	if (eyePain == '1') riskScore += 3;
+	if (eyeRedness == '1') riskScore += 3;
+	if (feetWeakness == '1') riskScore += 3;
+	if (smoking == '2') riskScore += 10;
+	else if (smoking == '1') riskScore += 5;
+	if (alcohol == '1') riskScore += 5;
+	if ((sex == '1' && waist > 102) || (sex == '2' && waist > 88)) riskScore += 5;
+	if (physicalActivity == '1') riskScore += 5;
     // Display the result
+	if (riskScore > 100) riskScore = 100;
     const resultElement = document.getElementById('result');
     resultElement.innerHTML = `<p>Your calculated hypertension risk score is: <strong>${riskScore}</strong></p>`;
     resultElement.style.display = 'block';
